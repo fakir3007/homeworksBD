@@ -28,7 +28,8 @@ CREATE TABLE IF NOT EXISTS PerfomersAlboms(
 create table if not exists tracks(
 	id serial primary key,
 	name varchar(40),
-	duration numeric
+	duration numeric,
+	alboms_id integer references alboms(id)
 );
 
 create table if not exists compilation(
